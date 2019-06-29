@@ -9,6 +9,10 @@ resources:
           delete_on_termination: true
           volume_id: { get_resource: volume }
       flavor: m1.tiny
+      image: cirros
+      networks:
+        - network: public
+      key_name: parth
       user_data_format: RAW
       user_data: |
         #!/bin/sh
